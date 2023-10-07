@@ -120,3 +120,19 @@ R = (Z2_liver - Z1_fat) / (Z2_liver + Z1_fat) # Reflection coefficient calculati
 print(round(R, 3))
 # 0.11
 # Q7
+Z2_air = p_air * c_air # Acoustic impedance calculation of air
+print(Z2_air)
+# 379.47331922020555
+
+Z1_muscle = p_muscle * c_muscle # Acoustic impedance calculation of muscle
+print(Z1_muscle)
+# 1730895.7218735043
+
+R_m_a = (Z2_air - Z1_muscle) / (Z2_air + Z1_muscle) # Reflection coefficent calculation
+print(R_m_a)
+# -0.9995616256499558
+
+Trans = 1 - (- R_m_a) # Transmission coefficient calculation
+print(Trans)
+# 0.00043837435004423497
+# 0.001
